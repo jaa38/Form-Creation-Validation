@@ -9,15 +9,17 @@ async function fetchUserData() {
     dataContainer.innerHTML = '';
 
     const userList = document.createElement('ul');
+
     users.forEach(function (user) {
       const listItem = document.createElement('li');
       listItem.textContent = user.name;
       userList.appendChild(listItem);
     });
+
     dataContainer.appendChild(userList);
   } catch (error) {
     dataContainer.innerHTML = '';
-    dataContainer.textContent = 'Failed to laod user data.';
+    dataContainer.textContent = 'Failed to load user data.';
   }
 }
 
