@@ -9,13 +9,11 @@ async function fetchUserData() {
     dataContainer.innerHTML = '';
 
     const userList = document.createElement('ul');
-
     users.forEach(function (user) {
       const listItem = document.createElement('li');
       listItem.textContent = user.name;
       userList.appendChild(listItem);
     });
-
     dataContainer.appendChild(userList);
   } catch (error) {
     dataContainer.innerHTML = '';
@@ -23,6 +21,6 @@ async function fetchUserData() {
   }
 }
 
-document.addEventListener('DOMContentLoaded', function () {
-  fetchUserData();
-});
+document.addEventListener('DOMContentLoaded', function(){
+    fetchUserData();
+})
